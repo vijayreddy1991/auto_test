@@ -2,5 +2,5 @@ resources:
  - name: r_bitbucket
    type: GitRepo
    configuration:
-     gitProvider: s_bitbucketServer
-     path: PIP/automation/tests/core/yaml
+     gitProvider: github
+     path: vijayreddy1991/auto_test/tests/core/yaml
