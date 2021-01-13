@@ -1,0 +1,31 @@
+resources:
+  - name: auto_gitRepo
+    type: GitRepo
+    configuration:
+      path: PIP/automation
+      gitProvider: bsBitbucket
+      branches:
+        include: ^{{gitBranch}}$
+
+  - name: nightly_gitRepo
+    type: GitRepo
+    configuration:
+      path: PIP/automation
+      gitProvider: bsBitbucket
+      branches:
+        include: ^master$
+
+  - name: infra_test_gitRepo
+    type: GitRepo
+    configuration:
+      path: PIP/automation
+      gitProvider: bsBitbucket
+      branches:
+        include: ^{{gitBranch}}$
+      files:
+        include: \binfra\/test\/.+\b
+
+  - name: nightly_cron
+    type: CronTrigger
+    configuration:
+      interval: "0 */24 * * *"
