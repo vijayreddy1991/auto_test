@@ -2,7 +2,7 @@ resources:
   - name: auto_gitRepo
     type: GitRepo
     configuration:
-      path: PIP/automation
+      path: ~vijaykp/auto_test
       gitProvider: bsBitbucket
       branches:
         include: ^{{gitBranch}}$
@@ -10,7 +10,7 @@ resources:
   - name: nightly_gitRepo
     type: GitRepo
     configuration:
-      path: PIP/automation
+      path: ~vijaykp/auto_test
       gitProvider: bsBitbucket
       branches:
         include: ^master$
@@ -18,7 +18,7 @@ resources:
   - name: infra_test_gitRepo
     type: GitRepo
     configuration:
-      path: PIP/automation
+      path: ~vijaykp/auto_test
       gitProvider: bsBitbucket
       branches:
         include: ^{{gitBranch}}$
